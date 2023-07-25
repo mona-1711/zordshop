@@ -1,12 +1,15 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-import Category from "./Category";
 import './Buy.css'
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
+
 
 export default function Buy() {
   return (
+    
     <div classNameName="hero">
+      <Navbar />
       <Carousel data-bs-theme="dark">
         <Carousel.Item>
           {" "}

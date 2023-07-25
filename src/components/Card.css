@@ -299,3 +299,60 @@ body {
   /* Remove width: 20rem; to let cards adjust their width */
   padding: 15px; /* Add padding to create gaps between cards */
 }
+
+.maincard{
+  display: contents;
+}
+
+.checkout-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Change this to adjust the alignment as needed */
+}
+
+.card-container {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.display-details{
+  box-sizing: border-box;
+  background-color: aqua;
+}
+
+.jimmy{
+  width: 120px;
+  margin-left: 62px;
+  margin-top: 27px;
+  font-size: 17px;
+  background: transparent;
+  border-radius: 50px;
+  padding: 15px;
+  /* transform: translateX(620px); */
+  text-decoration: none;
+  color: #2a0f0164;
+  font-family:Georgia;
+  font-weight: 900;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.swayy{
+  width: 250px;
+  margin-left: 4px;
+  margin-top: 27px;
+  font-size: 17px;
+  background: transparent;
+  border-radius: 10px;
+  padding: 15px;
+  /* transform: translateX(620px); */
+  text-decoration: none;
+  color: #08080864;
+  font-family:Georgia;
+  font-weight: 900;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}

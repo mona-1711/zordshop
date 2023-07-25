@@ -15,7 +15,7 @@
     flex-direction: column;
 }
 
-.sb__footer-links{
+.kb__footer-links{
     display: flex;
     justify-content: center;
     align-items: flex-start;

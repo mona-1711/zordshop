@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../components/Card.css";
+import Navbar from "./Navbar";
 
 const Card = ({ data }) => {
   return (
     <>
       <div className="card-grid ">
+        
         {data?.map((card, index) => (
           <div key={index} className="d-flex flex-wrap nowrap">
             <div id="card" className="producttt" style={{ width: "  24rem" }}>
@@ -21,8 +23,8 @@ const Card = ({ data }) => {
                             <span className="p-company">{card.brand}</span>
                           </div>
                           <div className="a-size">
-                            Available sizes :{" "}
-                            <span className="size">{card.size}</span>
+                            {/* Available sizes :{" "} */}
+                            {/* <span className="size">{card.size}</span> */}
                           </div>
                         </div>
                       </div>
@@ -33,7 +35,7 @@ const Card = ({ data }) => {
                         </div>
 
                         <a className="cart" href="#">
-                          <span className="price">{card.price}$</span>
+                          <span className="price">{card.price} Z</span>
                           <span className="add-to-cart">
                             {" "}
                             <Link

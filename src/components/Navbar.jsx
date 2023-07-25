@@ -5,13 +5,15 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <div className="">
+    <div className="pudhusu">
       <nav className="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
         <div className="container">
-          <div className="logo">
-            <a className="navbar-brand" href="#">
-              <img src="assets/logo1.png" width="55" height="50" alt="" />
-            </a>
+          <div className="logo-dot">
+            {/* <a className="navbar-brand" href="#"> */}
+            <img className='app-logo-dot'
+            src="/Zordlogo2.png"
+            alt='' />
+            {/* </a> */}
           </div>
           <button
             className="navbar-toggler"

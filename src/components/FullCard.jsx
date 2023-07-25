@@ -1,22 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "../components/FullCard.css";
+import Navbar from "./Navbar";
+import Aboutus from "./Aboutus";
 
 const FullCard = ({ data }) => {
   const { id } = useParams();
   console.log(id);
 
   const [card, setCard] = useState({});
+  const [size, setSize] = useState('size-M');
 
   useEffect(() => {
     const d = data?.filter((card) => card.id === parseInt(id));
-    console.log(d);
     setCard(d);
   }, []);
 
   return (
+    <>
+    <Navbar/>
     <div className="">
-      {data?.map((card, index) => (
+      {/* {data?.map((card, index) => ( */}
         <section className="full">
           <div className="container ">
             <div className="fullcard">
@@ -42,32 +46,33 @@ const FullCard = ({ data }) => {
                     <h1>{card && card[0]?.title}</h1>
                     <p>{card && card[0]?.description}</p>
                     <p>{card && card[0]?.brand}</p>
-
                     <p>
                       <label for="size">Choose a size: </label>
-
-                      <select id="cars">
-                        <option value="sizem">M</option>
-                        <option value="sizel">L</option>
-                        <option value="sizeXL">XL</option>
-                        <option value="sizeS">S</option>
+                      <select id="cars" onChange={(e) => setSize(e.target.value)}>
+                        <option value="size-M">M</option>
+                        <option value="size-L">L</option>
+                        <option value="size-XL">XL</option>
+                        <option value="size-S">S</option>
                       </select>
                     </p>
                   </div>
-                  <div class="product-price-btn">
+                  <div className="">
                     <p>
-                      <span>{card && card[0]?.price}</span>$
+                      <span>{card && card[0]?.price}</span>Z
                     </p>
-                    <Link to={`/carts/${card.id}`}>
-                      <button type="button">buy now</button><br /></Link>
                     {/* <a href="" className="addtocart">Add to cart</a> */}
-                  </div>
+                </div>
+                <Link to={`/carts/${card[0]?.id}`} state={{ size: size }}>
+                    <button className="buy-now-btn" type="button">buy now</button><br />
+                    </Link>
                 </div>
               </div>
             </div>
           </div>
-        </section>))}
+      </section>
+        {/* )} */}
     </div>
+    <Aboutus/></>
   );
 };
 

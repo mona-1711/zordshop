@@ -7,7 +7,7 @@ export const Footer = () => {
       <div className="footer" id="footer">
           <Aboutus/>
         <div className="sb-footer section-padding">
-            <div className="sb__footer-links">
+            <div className="kb__footer-links">
                 
                 <div className="sb__footer-links-div">
                     <h4>Partners</h4>
